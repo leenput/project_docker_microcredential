@@ -1,12 +1,28 @@
-FROM <base imagae>
+# Official stable Python image selected from DockerHub based on python-based requirements
+# Use Python image as base image
+FROM python:3.11-slim
 
-# TODO: Set a working directory
+# Add label
+LABEL maintainer="Leena Putzeys"
 
-# TODO: Copy the requirements.txt file to the working directory
+# Set a working directory
+WORKDIR /data
 
-# TODO: Install the Python dependencies
+# Copy the requirements.txt file to the working directory of the container
+COPY requirements.txt .
 
-# TODO: Copy the training script (train.py) to the working directory
+# Install the Python dependencies
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 
-# TODO: Run the training script that generates the model
-CMD [...]
+# Copy the training script (train.py) to the working directory
+COPY train.py .
+
+# Run the training script that generates the model
+CMD ["python","train.py"]
+
+# Steps to run the training of model on own laptop
+#	1. open docker desktop
+#	2. build image: sudo docker build -t model-train:python3.11-slim -f Dockerfile.train .
+#	3. check if image was build: sudo docker images 
+#	4. run the container: sudo docker run model-train:python3.11-slim
