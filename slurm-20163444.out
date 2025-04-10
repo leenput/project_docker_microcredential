@@ -1,0 +1,49 @@
+Let's build containers on the VSC
+INFO:    Starting build...
+Copying blob sha256:0ae3bf74519da2c8ccd7ff5d80c3575b217caa1b17701b98f9c2a08cd7f3da31
+Copying blob sha256:8a628cdd7ccc83e90e5a95888fcb0ec24b991141176c515ad101f12d6433eb96
+Copying blob sha256:2a47a8c4fd5c358f98fb193471dc5d7a1e75e33d480fb7a25a7130840a8769d9
+Copying blob sha256:9c538fc354918cfe13231798fe17d7c4b463cda38500187c0ecedcc061d6129e
+Copying blob sha256:47bbb0afa7fe5695aca89f358dc3e73f46655977e201f553a558b4590b951dac
+Copying blob sha256:bfaefce2698fc9aa292a77e6a7a2dc5c5b96e274cbc42d9f77fbc18bd65b2751
+Copying blob sha256:a155dd3a05b256fa2691a0c1733a51b4cdfc75a6bc0db4ca04abedbb16391dd3
+Copying blob sha256:44bfad6b88982ca2639da655987e42d675cdd14ba83cf7cd732a3544965b7b1b
+Copying blob sha256:d18aa744867de9dee97868ff9aef53ec99e31aef166df44da964613d3d887501
+Copying blob sha256:cdc334c564348d4c408800f9fcd52e370830dc26a289a685d2f3b6146b791c3a
+Copying config sha256:c7cb4ab762536a0cc70cd10455eb72323ef8624fb42e9e964b6c313bcdbcf854
+Writing manifest to image destination
+2025/04/10 14:19:05  info unpack layer: sha256:8a628cdd7ccc83e90e5a95888fcb0ec24b991141176c515ad101f12d6433eb96
+2025/04/10 14:19:06  info unpack layer: sha256:2a47a8c4fd5c358f98fb193471dc5d7a1e75e33d480fb7a25a7130840a8769d9
+2025/04/10 14:19:07  info unpack layer: sha256:9c538fc354918cfe13231798fe17d7c4b463cda38500187c0ecedcc061d6129e
+2025/04/10 14:19:07  info unpack layer: sha256:47bbb0afa7fe5695aca89f358dc3e73f46655977e201f553a558b4590b951dac
+2025/04/10 14:19:07  info unpack layer: sha256:bfaefce2698fc9aa292a77e6a7a2dc5c5b96e274cbc42d9f77fbc18bd65b2751
+2025/04/10 14:19:07  info unpack layer: sha256:0ae3bf74519da2c8ccd7ff5d80c3575b217caa1b17701b98f9c2a08cd7f3da31
+2025/04/10 14:19:07  info unpack layer: sha256:a155dd3a05b256fa2691a0c1733a51b4cdfc75a6bc0db4ca04abedbb16391dd3
+2025/04/10 14:19:08  info unpack layer: sha256:44bfad6b88982ca2639da655987e42d675cdd14ba83cf7cd732a3544965b7b1b
+2025/04/10 14:19:12  info unpack layer: sha256:d18aa744867de9dee97868ff9aef53ec99e31aef166df44da964613d3d887501
+2025/04/10 14:19:12  info unpack layer: sha256:cdc334c564348d4c408800f9fcd52e370830dc26a289a685d2f3b6146b791c3a
+INFO:    Creating SIF file...
+INFO:    Build complete: model-train.sif
+INFO:    Starting build...
+Copying blob sha256:489fdbaf1b1eb7d6709d369a780794a39a2ce445c4a88f28df1d955c1d813d2b
+Copying blob sha256:8a628cdd7ccc83e90e5a95888fcb0ec24b991141176c515ad101f12d6433eb96
+Copying blob sha256:74018f7cfa8f2965fd86b13c38f71417bc846e071a5f5bb5ae569ccb5a6e7248
+Copying blob sha256:a0b0cfc480ce03c723a597904bcfbf28c71438c689e6d5097c2332835f67a40c
+Copying blob sha256:97d21b95fb00ac3b08975ab6f8709f3a7e35a05d75e2f9a70fa95348279dac27
+Copying blob sha256:160c6e4d51bd92dbfe5b4c5d7096ab7c0a227c6ceb0c6fe8270d68e0ffc46825
+Copying blob sha256:d210d3818bb9d1be41c2e8d2a17a06bd964955a12d0966d7b2b31caaeac1731f
+Copying blob sha256:6def3b0f029ac8b94bf690b5e3cda7604c3b9c825a81c998ce7eeb83cd1894b6
+Copying config sha256:9e6fc2e2ad58b4fa80a0638427150d97aab7bdde9553ef69a0e7310f383228d3
+Writing manifest to image destination
+2025/04/10 14:20:16  info unpack layer: sha256:8a628cdd7ccc83e90e5a95888fcb0ec24b991141176c515ad101f12d6433eb96
+2025/04/10 14:20:17  info unpack layer: sha256:74018f7cfa8f2965fd86b13c38f71417bc846e071a5f5bb5ae569ccb5a6e7248
+2025/04/10 14:20:17  info unpack layer: sha256:a0b0cfc480ce03c723a597904bcfbf28c71438c689e6d5097c2332835f67a40c
+2025/04/10 14:20:18  info unpack layer: sha256:97d21b95fb00ac3b08975ab6f8709f3a7e35a05d75e2f9a70fa95348279dac27
+2025/04/10 14:20:18  info unpack layer: sha256:160c6e4d51bd92dbfe5b4c5d7096ab7c0a227c6ceb0c6fe8270d68e0ffc46825
+2025/04/10 14:20:18  info unpack layer: sha256:489fdbaf1b1eb7d6709d369a780794a39a2ce445c4a88f28df1d955c1d813d2b
+2025/04/10 14:20:18  info unpack layer: sha256:d210d3818bb9d1be41c2e8d2a17a06bd964955a12d0966d7b2b31caaeac1731f
+2025/04/10 14:20:21  info unpack layer: sha256:6def3b0f029ac8b94bf690b5e3cda7604c3b9c825a81c998ce7eeb83cd1894b6
+INFO:    Creating SIF file...
+INFO:    Build complete: model-infer.sif
+Move the containers to containers folder in scratch
+Finished!
