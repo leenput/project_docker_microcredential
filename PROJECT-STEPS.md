@@ -5,10 +5,9 @@ Project description: https://github.com/vib-tcp/project_docker_microcredential
 ## Deliverable 1: Clone this repository to your personal github account
 **step 1**: fork project 
 **step 2**: clone the project on local machine
-`git clone git@github.com:leenput/project_docker_microcredential.git`
+`git clone git@github.com:leenput project_docker_microcredential.git`
 
-## Deliverable 2: Containerize training the machine learning model
-## Deliverable 4: Train and run the machine learning model using Docker
+## Deliverable 2 & 4: Containerize training the machine learning model and run it using Docker
 
 **step 1:** complete file named Dockerfile.train
 
@@ -67,6 +66,7 @@ Personal DockerHub profile: leenaputzeys
 
 **step 2:** modify image tags to make compatible with DockerHub repository naming conventions
 `sudo docker tag model-infer:v1-python3.9-slim leenaputzeys/model-infer:v1-python3.9-slim`
+
 `sudo docker tag model-train:v1.1-python3.11-slim leenaputzeys/model-train:v1.1-python3.11-slim`
 
 **step 3:** push images to DockerHub
@@ -91,6 +91,7 @@ validate online: [DockerHub Leena](https://hub.docker.com/repositories/leenaputz
 `apptainer build model-infer.sif docker://leenaputzeys/model-infer:v1-python3.9-slim`
 
 `apptainer build model-train.sif docker://leenaputzeys/model-train:v1.1-python3.11-slim`
+
 Edit: realised that this is not necessary, i should directly build images from the job script. 
 
 **step 4:** make a job script that builds the model-train apptainer image
@@ -103,12 +104,16 @@ Edit: realised that this is not necessary, i should directly build images from t
 
 **step 1:** Download ML-job.sh and slurm log from VSC
 `scp vsc49035@login.hpc.ugent.be:/user/gent/490/vsc49035/jobs/ML-job.sh .`
+
 `scp vsc49035@login.hpc.ugent.be:/user/gent/490/vsc49035/jobs/slurm*.out`
 
 **Step 2:** Add files to github repository 
-`git add *`
-`git commit -m "Add job script and slurm output log used to build apptainer containers on VSC"`
-`git push`
+```
+git add *
+git commit -m "Add job script and slurm output log used to build apptainer containers on VSC"`
+git push`
+
+```
 
 To view the files:
 [VSC script](https://github.com/leenput/project_docker_microcredential/blob/main/ML-job.sh)
