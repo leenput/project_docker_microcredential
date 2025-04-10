@@ -6,7 +6,8 @@ FROM python:3.11-slim
 LABEL maintainer="Leena Putzeys"
 
 # Set a working directory
-WORKDIR /data
+# Modified from /data to /app to ensure compatability with train.py
+WORKDIR /app
 
 # Copy the requirements.txt file to the working directory of the container
 COPY requirements.txt .
@@ -16,13 +17,17 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Copy the training script (train.py) to the working directory
+# Error after running: outputdir in script needs to be compatible.
+# Added mkdir command
 COPY train.py .
+RUN mkdir -p /models
 
 # Run the training script that generates the model
 CMD ["python","train.py"]
 
 # Steps to run the training of model on own laptop
 #	1. open docker desktop
-#	2. build image: sudo docker build -t model-train:python3.11-slim -f Dockerfile.train .
-#	3. check if image was build: sudo docker images 
-#	4. run the container: sudo docker run model-train:python3.11-slim
+#	2. build image: sudo docker build -t model-train:v1.1-python3.11-slim -f Dockerfile.train .
+#	3. check if image was build: sudo docker images
+#	4. make local folder to mount volume to get output files from container 
+#	5. run the container: sudo docker run -v ./models:/app/models model-train:v1.1-python3.11-slim
