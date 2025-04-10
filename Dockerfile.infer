@@ -1,7 +1,24 @@
-WORKDIR /app
-COPY requirements.txt .
-COPY server.py .
+# Define base image
 FROM python:3.9-slim
-CMD ["python", "server.py"]
+
+# Define working directory in container
+WORKDIR /app
+
+# Copy requirements and install the python dependencies
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-EXPOSE 8080
+
+# Copy the server script in the container
+COPY server.py .
+
+# Expose the container port to 8080
+EXPOSE 8080 
+
+# Run the server.py script 
+CMD ["python", "server.py"]
+
+# Commands to build and run the container
+#	1. Build the image: sudo docker build -t model-infer:v1-python3.9-slim -f Dockerfile.infer
+#	2. Check if build was successfull and find image id: sudo docker images 
+#	3. Run the container in detached mode and set port: sudo docker run --detach -p 5000:8080 -v ./models:/app/models model-infer:v1-python3.9-slim
+#	4. Check URL to see if it worked: http://localhost:5000/
